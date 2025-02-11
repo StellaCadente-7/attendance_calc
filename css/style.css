@@ -1,0 +1,135 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --attendance-color: #0072cf;
+    --absence-color: #e01767;
+    --section-backg: #ececec;
+    --main-duration: 0.3s;
+    --main-padding: 100px
+}
+body {
+    font-family: "Open Sans", system-ui;
+    background-image: url(../images/flower1.jpg);
+    animation: change 60s infinite ease-in-out;
+}
+@keyframes change {
+    0% {
+        background-image: url(../images/flower1.jpg);
+    }
+    25% {
+        background-image: url(../images/flower2.jpg);
+    }
+    50% {
+        background-image: url(../images/flower3.jpg);
+    }
+    75% {
+        background-image: url(../images/flower4.jpg);
+    }
+    100% {
+        background-image: url(../images/flower5.jpg);
+    }
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+
+.overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 91%;
+        height: 93%;
+        background-color: rgb(255 255 255 / 75%);
+        z-index: -1;
+}
+
+.pre_calc .form {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (max-width: 991px) {
+    .pre_calc .form {
+        flex-basis: 100%;
+    }
+} 
+
+
+.pre_calc .container {
+    margin-top: 50px;
+}
+.totals {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.totals .status {
+    font-weight: bold;
+}
+
+.percentages{
+    font-size: 20px;
+}
+.percentages .attendance_per,
+.percentages .absence_per {
+    color: var(--attendance-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+.percentages .absence_per {
+    color: var(--absence-color);
+}
+
+.results {
+    border-top: 1px solid #767676;
+    padding: 15px;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (max-width: 991px) {
+    .pre_calc .results {
+        flex-basis: 100%;
+    }
+}
+
+.pre_calc .buttons {
+    margin-top: 50px;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
